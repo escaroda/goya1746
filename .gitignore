@@ -1,0 +1,26 @@
+# Build
+gerbers/
+*.zip
+
+# KiCad backups and autosaves
+*.bak
+*.tmp
+*.kicad_prl
+*.kicad_dru
+*.kicad_wks
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*.lck
+*-backups/
+
+# KiCad footprint cache
+fp-info-cache
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
