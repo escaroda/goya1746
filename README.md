@@ -47,7 +47,11 @@ P.S. Future releases are not expected in the near term due to financial constrai
 
 All resistors are 1/4 W. All capacitors must have a minimum voltage rating of 35 V. Consider capacitors to be film unless otherwise specified. All ceramic capacitors exhibit some degree of piezoelectric effect, but C0G (also known as NP0) dielectrics have the lowest such effect and are recommended for this design. If 25 kΩ potentiometers are unavailable, a 50 kΩ potentiometer may be used together with a 50 kΩ resistor in parallel. This changes the taper slightly (especially for log pots), because the resistance curve is altered by the parallel resistor. Ferrite bead R1 is optional and can be replaced with a wire link. The OPA2134 at U1 may be substituted with another TL072 without any noticeable difference.
 
-You will also need 6.3 mm jack sockets and a **plastic DC input jack wired for center negative**.
+You'll also need:
+- 6.3 mm jack sockets,
+- DIP8 sockets for each op-amp,
+- optional JST connectors for DC input and LED,
+- a **plastic** DC input jack wired for center negative.
 
 This pedal provides two output options: Guitar Out and Power Out. In most cases, you won’t need to wire both. If the pedal is used at the end of a signal chain (similar to a real amplifier), Power Out is the preferred choice. Power Out is a low-impedance, line-level signal, so it can be safely connected to standard line inputs, such as those on audio interface. Guitar Out is a traditional high-impedance output suitable for connecting to other pedals or amp inputs.
 
