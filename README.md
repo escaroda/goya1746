@@ -67,7 +67,7 @@ This pedal provides two output options: Guitar Out and Power Out. In most cases,
 |C21                |1n              |1  |                                       |
 |C24,C25,C26,C27,C28|47u             |5  |Electrolytic ~35V                      |
 |D1,D2,D5,D6        |1N4148          |4  |                                       |
-|D3,D4              |1N4734A         |2  |                                       |
+|D3,D4              |1N4734A         |2  |5.6V zener (equivalents: 1N752, 1N5232)|
 |D7                 |LED 12V         |1  |Require ~2.2K resistor                 |
 |DEEP1,PRES1        |C25K            |2  |                                       |
 |GAIN1              |A250K           |1  |                                       |
