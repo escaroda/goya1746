@@ -40,6 +40,7 @@ P.S. Future releases are not expected in the near term due to financial constrai
 - [aionfx.com](https://aionfx.com/project/dz4-preamp/) for showing how things can be changed.
 - [pcbguitarmania.com](https://pcbguitarmania.com/product/benzin-vh4/) for yet another reference and food for thoughts.
 - [effectslayouts.blogspot.com](https://effectslayouts.blogspot.com/2019/07/diezel-vh4.html) for better understanding how the footswitch wiring should work.
+- [techexplorations.com](https://techexplorations.com/kicad/) for great KiCad educational materials.
 
 
 ## Bill of Materials Preview
