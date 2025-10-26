@@ -45,7 +45,7 @@ P.S. Future releases are not expected in the near term due to financial constrai
 
 ## Bill of Materials
 
-All resistors are 1/4 W. All capacitors must have a minimum voltage rating of 35 V. Consider capacitors to be film unless otherwise specified. All ceramic capacitors exhibit some degree of piezoelectric effect, but C0G (also known as NP0) dielectrics have the lowest such effect and are recommended for this design. If 25 kΩ potentiometers are unavailable, a 50 kΩ potentiometer may be used together with a 50 kΩ resistor in parallel. This changes the taper slightly (especially for log pots), because the resistance curve is altered by the parallel resistor. Ferrite bead R1 is optional and can be replaced with a wire link. The OPA2134 at U1 may be substituted with another TL072 without any noticeable difference.
+All resistors are 1/4 W metal film with 1% tolerance. All capacitors must have a minimum voltage rating of 35 V. Consider capacitors to be film unless otherwise specified. All ceramic capacitors exhibit some degree of piezoelectric effect, but C0G (also known as NP0) dielectrics have the lowest such effect and are recommended for this design. If 25 kΩ potentiometers are unavailable, a 50 kΩ potentiometer may be used together with a 50 kΩ resistor in parallel. This changes the taper slightly (especially for log pots), because the resistance curve is altered by the parallel resistor. Ferrite bead R1 is optional and can be replaced with a wire link. The OPA2134 at U1 may be substituted with another TL072 without any noticeable difference.
 
 You'll also need:
 - 6.3 mm jack sockets,
@@ -54,6 +54,8 @@ You'll also need:
 - a **plastic** DC input jack wired for center negative.
 
 This pedal provides two output options: Guitar Out and Power Out. In most cases, you won’t need to wire both. If the pedal is used at the end of a signal chain (similar to a real amplifier), Power Out is the preferred choice. Power Out is a low-impedance, line-level signal, so it can be safely connected to standard line inputs, such as those on audio interface. Guitar Out is a traditional high-impedance output suitable for connecting to other pedals or amp inputs.
+
+*For ICs and other essential components, use reputable suppliers only. Avoid sources like eBay or AliExpress, as counterfeit or unreliable parts are widespread on those platforms and may cause malfunction or failure.*
 
 
 |Reference          |Value           |Qty|Notes                                           |
