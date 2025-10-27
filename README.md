@@ -8,7 +8,7 @@
 
 ## Overview
 
-**goya1746** is an overdrive & preamp pedal based on the legendary Diezel VH4 channel 3. Fully open circuit board designed in KiCad 8. The main idea was to avoid oscillations on all gain levels. This project is shared for hobbyists who want to study, modify, or build their own. The full PCB outline is 115 × 70 mm (4.53 × 2.76 in), but the usable area is about 96 × 70 mm (3.78 × 2.76 in) if you remove the side "wings" in KiCad and define your own edge cut before generating Gerbers. 
+**goya1746** is an overdrive & preamp pedal based on the legendary Diezel VH4 channel 3. Fully open circuit board designed in KiCad 8. The main idea was to avoid oscillations on all gain levels. This project is shared for hobbyists who want to study, modify, or build their own. The full PCB outline is 115 × 70 mm (4.53 × 2.76 in), but the usable area is about 96 × 70 mm (3.78 × 2.76 in) if you remove the side "wings" in KiCad and define your own edge cut before generating Gerbers. In theory, it should fit a 1590BB enclosure, but keep in mind that each potentiometer is wired separately and the connection pads are not located at the corners of the PCB, so there will be quite a lot of wiring inside.
 
 
 ## Manufacturing
@@ -19,7 +19,7 @@ If you want to fabricate the PCB, just upload the `.zip` Gerber files to your fa
 
 ## Important notes
 
-- This pedal should be powered between 12-18VDC. Power draw 100mA. There are rumors 15VDC would give the best result, but our recommendation is 18VDC.
+- This pedal should be powered with 12-18VDC. Power draw 100mA. There are claims that 15VDC provides the best results because it generates less heat in the voltage regulator, but 18VDC is the standard.
 - The LM2940 regulator is installed vertically. Its metal tab can be mounted to the chassis to help dissipate heat — just make sure the chassis is grounded and not connected to any other signal paths. This workaround increases build complexity and will be refined in a future revision. The goal was to minimize board temperature to prolong the lifespan of nearby electrolytic capacitors.
 - Only five electrolytic capacitors are used, and they are strategically placed to provide shielding for the TC1044SCPA charge pump switching regulator IC from nearby components.
 - Some capacitors, specifically C3, C4, C5, C9, C12, C17, C18, C20 and C22, that were originally electrolytic, have been replaced with film capacitors. The schematic remains unchanged, but the PCB footprints are different. You can still install electrolytic capacitors in those positions, but be sure to observe the correct polarity.
