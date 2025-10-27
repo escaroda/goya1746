@@ -8,7 +8,7 @@
 
 ## Overview
 
-**goya1746** is an overdrive & preamp pedal based on the legendary Diezel VH4 channel 3. Fully open circuit board designed in KiCad 8. The main idea was to avoid oscillations on all gain levels. This project is shared for hobbyists who want to study, modify, or build their own. The full PCB outline is 115 × 70 mm, but the usable area is about 96 × 70 mm if you remove the side "wings" in KiCad and define your own edge cut before generating Gerbers.
+**goya1746** is an overdrive & preamp pedal based on the legendary Diezel VH4 channel 3. Fully open circuit board designed in KiCad 8. The main idea was to avoid oscillations on all gain levels. This project is shared for hobbyists who want to study, modify, or build their own. The full PCB outline is 115 × 70 mm (4.53 × 2.76 in), but the usable area is about 96 × 70 mm (3.78 × 2.76 in) if you remove the side "wings" in KiCad and define your own edge cut before generating Gerbers. 
 
 
 ## Manufacturing
@@ -116,7 +116,7 @@ The chassis should be properly grounded to ensure effective shielding and noise 
 
 - Layers: 2
 - Thickness: 1.6 mm
-- PCB Size: 115 x 70 mm
+- PCB Size: 115 x 70 mm (4.53 × 2.76 in)
 - Copper weight: 1 oz (default PCB fab)
 - Trace clearance: 6 mil or 0.1524mm
 - Soldermask: [Black / Green / Anything]
