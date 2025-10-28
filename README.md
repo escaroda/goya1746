@@ -148,6 +148,8 @@ The chassis should be properly grounded to ensure effective shielding and noise 
 - Position the voltage regulator so that it can be laid flat on the PCB. Add a ground plane underneath it for better heat distribution.
 - Add jumper to select mid-pot wiring between Marshall and Fender styles.
 - Substitute all ceramic caps in favor of polypropylene film ones?
+- Consider adapting the PCB layout to fit more popular enclosures, such as 1590BB.
+- Would it be possible to rewire everything so that pots connected directly to the PCB? Estimate PCB size, production costs and a headache of acquiring the correct pots.
 
 
 ## License
@@ -159,4 +161,3 @@ Copyright (c) 2025 Dmitry Escaroda.
 ## Contribution
 
 If you build this pedal, feel free to share photos or mods via Discussions. If you are an experienced Electronics Engineer or PCB Designer and see how something could be improved for the benefit of all, please submit an issue.
-
