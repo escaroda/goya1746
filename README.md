@@ -26,7 +26,7 @@ If you want to fabricate the PCB, just upload the `.zip` Gerber files to your fa
 - The resistor 2.2K 1/4W for the LED 12V should be placed on the wire that connects it to the PCB. Adjust the resistor value to achieve the desired brightness.
 - Even though the LM2940CT-12/NOPB voltage regulator provides reverse-polarity protection for the entire circuit, it is still good practice to solder a 1N5817 Schottky diode in series with the + wire leading to the DC input. The striped end (cathode) should face the PCB. For example: DC Jack → [Anode — Diode — Cathode] → PCB. You can see this approach used in almost all PedalPCB schematics. Make sure you identify the +V and Ground pins of the DC input by referring to the PCB design in KiCad.
 - For experimental purposes, the mid-pot tone control is wired in the so-called "Marshall style," which gives the mid control a stronger effect and shifts the tone toward a punchier, more mid-rich sound compared to a "Fender style" tone stack. Future revisions may provide both options, allowing the choice to be independent of the PCB layout.
-- Because of space limitations in this version, buffered bypass solder pads are not included. This may be added in a future revision. At the moment, the on/off switch must be wired as a true bypass by the builder.
+- Because of space limitations in this version, buffered bypass solder pads are not included. This may be added in a future revision. At the moment, the on/off switch must be wired as a true bypass by the builder. Or, if you're feeling hacky, you can connect a wire between the C3 capacitor and the R4 resistor (for example, to the side of the R4 resistor that isn’t connected to Ground), and that will be your buffer. And the signal after R17 should be shorted to Ground during bypass.
 
 
 P.S. Future releases are not expected in the near term due to financial constraints. However, once the situation improves, development will continue, including projects such as Turbo Rat, SansAmp GT-2, Boss CE-2, as well as a search for the best fuzz circuit.
@@ -142,6 +142,13 @@ The chassis should be properly grounded to ensure effective shielding and noise 
 
 ![PCB](docs/goya1746_pcb_quicklook.png)
 
+## TODO
+
+- Add a connection pad for the buffered output between C3 and R4, and find a suitable location for it on the PCB. Add a connection pad after R17 to be able to short it to Ground during bypass. Update schematic.
+- Position the voltage regulator so that it can be laid flat on the PCB. Add a ground plane underneath it for better heat distribution.
+- Add jumper to select mid-pot wiring between Marshall and Fender styles.
+- Substitute all ceramic caps in favor of polypropylene film ones?
+
 
 ## License
 
@@ -151,5 +158,5 @@ Copyright (c) 2025 Dmitry Escaroda.
 
 ## Contribution
 
-If you build this pedal, feel free to share photos or mods via Discussions.
+If you build this pedal, feel free to share photos or mods via Discussions. If you are an experienced Electronics Engineer or PCB Designer and see how something could be improved for the benefit of all, please submit an issue.
 
