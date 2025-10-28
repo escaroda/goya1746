@@ -145,6 +145,7 @@ The chassis should be properly grounded to ensure effective shielding and noise 
 ## TODO
 
 - Add a connection pad for the buffered output between C3 and R4, and find a suitable location for it on the PCB. Add a connection pad after R17 to be able to short it to Ground during bypass. Update schematic.
+- Add + signs on a silkscreen layer for all connection pads to lower the risk of mistakes.
 - Position the voltage regulator so that it can be laid flat on the PCB. Add a ground plane underneath it for better heat distribution.
 - Add jumper to select mid-pot wiring between Marshall and Fender styles.
 - Substitute all ceramic caps in favor of polypropylene film ones?
