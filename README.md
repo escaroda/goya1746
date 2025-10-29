@@ -26,7 +26,7 @@ If you want to fabricate the PCB, just upload the `.zip` Gerber files to your fa
 - The resistor 2.2K 1/4W for the LED 12V should be placed on the wire that connects it to the PCB. Adjust the resistor value to achieve the desired brightness.
 - Even though the LM2940CT-12/NOPB voltage regulator provides reverse-polarity protection for the entire circuit, it is still good practice to solder a 1N5817 Schottky diode in series with the + wire leading to the DC input. The striped end (cathode) should face the PCB. For example: DC Jack → [Anode — Diode — Cathode] → PCB. You can see this approach used in almost all PedalPCB schematics. Make sure you identify the +V and Ground pins of the DC input by referring to the PCB design in KiCad.
 - For experimental purposes, the mid-pot tone control is wired in the so-called "Marshall style," which gives the mid control a stronger effect and shifts the tone toward a punchier, more mid-rich sound compared to a "Fender style" tone stack. Future revisions may provide both options, allowing the choice to be independent of the PCB layout.
-- Because of space limitations in this version, buffered bypass solder pads are not included. This may be added in a future revision. At the moment, the on/off switch must be wired as a true bypass by the builder. Or, if you're feeling hacky, you can connect a wire between the C3 capacitor and the R4 resistor (for example, to the side of the R4 resistor that isn’t connected to Ground), and that will be your buffer. And the signal after R17 should be shorted to Ground during bypass.
+- Because of space limitations in this version, buffered bypass solder pads are not included. This may be added in a future revision. At the moment, the on/off switch must be wired as a true bypass by the builder. Or, if you're feeling hacky, you can connect a wire between the C3 capacitor and the R4 resistor (for example, to the side of the R4 resistor that isn't connected to Ground), and that will be your buffer. And the signal after R17 should be shorted to Ground during bypass.
 
 
 P.S. Future releases are not expected in the near term due to financial constraints. However, once the situation improves, development will continue, including projects such as Turbo Rat, SansAmp GT-2, Boss CE-2, as well as a search for the best fuzz circuit.
@@ -41,6 +41,19 @@ P.S. Future releases are not expected in the near term due to financial constrai
 - [pcbguitarmania.com](https://pcbguitarmania.com/product/benzin-vh4/) for yet another reference and food for thoughts.
 - [effectslayouts.blogspot.com](https://effectslayouts.blogspot.com/2019/07/diezel-vh4.html) for better understanding how the footswitch wiring should work.
 - [techexplorations.com](https://techexplorations.com/kicad/) for great KiCad educational materials.
+- [Hans Rosenberg](https://www.youtube.com/@HansRosenberg74/videos) for interesting talks about good PCB design in general.
+
+
+## Guides
+
+These guides might help beginners who have never built their own pedals. Some links might become broken in the future.
+
+- [pedalparts.co.uk - General Build Guide](https://pedalparts.co.uk/docs/GeneralBuildGuide.pdf)
+- [five-cats-pedals.co.uk - General Build Guide](https://www.five-cats-pedals.co.uk/wp-content/uploads/2022/09/FiveCatsPedals-General-Build-Guide-V1.1-Aug-2022.pdf)
+- [aionfx.com - Troubleshooting Guide](https://aionfx.com/app/files/docs/kit_troubleshooting_guide.pdf)
+- [masfx.io - A Guide to Build Your Own DIY Guitar Pedal](https://masfx.io/quickfuzz.pdf)
+- [guitarpcb.com - A Beginner's Guide to Effects Pedals Components](https://guitarpcb.com/wp-content/uploads/2018/07/A-Beginners-Guide-to-Components.pdf)
+- [premierguitar.com - Build Your Own Stompbox](https://roar-assets-auto.rbl.ms/documents/9051/Oct14_PGDistortion_BuildGuide_Final_R2.pdf)
 
 
 ## Bill of Materials
@@ -53,7 +66,7 @@ You'll also need:
 - optional JST connectors for DC input and LED,
 - a **plastic** DC input jack wired for center negative.
 
-This pedal provides two output options: Guitar Out and Power Out. In most cases, you won’t need to wire both. If the pedal is used at the end of a signal chain (similar to a real amplifier), Power Out is the preferred choice. Power Out is a low-impedance, line-level signal, so it can be safely connected to standard line inputs, such as those on audio interface. Guitar Out is a traditional high-impedance output suitable for connecting to other pedals or amp inputs.
+This pedal provides two output options: Guitar Out and Power Out. In most cases, you won't need to wire both. If the pedal is used at the end of a signal chain (similar to a real amplifier), Power Out is the preferred choice. Power Out is a low-impedance, line-level signal, so it can be safely connected to standard line inputs, such as those on audio interface. Guitar Out is a traditional high-impedance output suitable for connecting to other pedals or amp inputs.
 
 *For ICs and other essential components, use reputable suppliers only. Avoid sources like eBay or AliExpress, as counterfeit or unreliable parts are widespread on those platforms and may cause malfunction or failure.*
 
@@ -109,7 +122,14 @@ This pedal provides two output options: Guitar Out and Power Out. In most cases,
 
 ## Ground & Shielding
 
-The chassis should be properly grounded to ensure effective shielding and noise reduction. Where possible, use cables with an outer braided shield and connect the shield to ground at least on one end—preferably at the PCB side. The metal backs of potentiometers may also be connected to ground to help reduce noise pickup through their housings. Ground loops are generally not a concern inside a small enclosure such as a pedal, so a strict star-ground topology is unnecessary. The **DC input jack must be plastic** (isolated from the enclosure). Most pedals use a negative center power supply, so a metal jack touching the chassis could short the positive voltage to ground.
+The chassis should be properly grounded to ensure effective shielding and noise reduction. Where possible, use cables with an outer braided shield and connect the shield to ground at least on one end — preferably at the PCB side. The metal backs of potentiometers may also be connected to ground to help reduce noise pickup through their housings. Ground loops are generally not a concern inside a small enclosure such as a pedal, so a strict star-ground topology is unnecessary. The **DC input jack must be plastic** (isolated from the enclosure). Most pedals use a negative center power supply, so a metal jack touching the chassis could short the positive voltage to ground.
+
+
+As a side note. There are a lot of myths and misconceptions about grounding in PCB design, mostly because of the many variables that need to be considered together with each statement. At some point, you think you understand how it works, but then you realize you don't. It's not always clear what the real cause of a problem is, and fixing one issue can accidentally fix another, leading to false conclusions.
+
+For example, advanced grounding techniques are mainly used for high-frequency applications, and the effects are often negligible in the audio range (up to 20 kHz). Through-hole components are considered obsolete for high-frequency PCBs, yet they are abundant in most analog music equipment. If we start replacing everything with SMD components, we might lose some of the unique characteristics that contribute to the sound we expect, or just our own perception might change.
+
+And let's not forget that the sound we're looking for doesn't always have to be perfect — it just has to be pleasant to our ears. Who wants to listen to a perfectly clean sine wave, right? We enjoy it when it's mixed with other harmonics and subtle modulations that make the sound feel alive. Often, it's exactly those imperfections in the components and PCB layout that create the desired effect.
 
 
 ## PCB Specifications
@@ -141,6 +161,7 @@ The chassis should be properly grounded to ensure effective shielding and noise 
 ![3D View Back](docs/goya1746_render_back.jpg)
 
 ![PCB](docs/goya1746_pcb_quicklook.png)
+
 
 ## TODO
 
