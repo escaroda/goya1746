@@ -46,14 +46,16 @@ P.S. Future releases are not expected in the near term due to financial constrai
 
 ## Guides
 
-These guides might help beginners who have never built their own pedals. Some links might become broken in the future.
+These guides might help beginners who have never built their own pedals. Some links might become broken.
 
-- [pedalparts.co.uk - General Build Guide](https://pedalparts.co.uk/docs/GeneralBuildGuide.pdf)
-- [five-cats-pedals.co.uk - General Build Guide](https://www.five-cats-pedals.co.uk/wp-content/uploads/2022/09/FiveCatsPedals-General-Build-Guide-V1.1-Aug-2022.pdf)
-- [aionfx.com - Troubleshooting Guide](https://aionfx.com/app/files/docs/kit_troubleshooting_guide.pdf)
-- [masfx.io - A Guide to Build Your Own DIY Guitar Pedal](https://masfx.io/quickfuzz.pdf)
-- [guitarpcb.com - A Beginner's Guide to Effects Pedals Components](https://guitarpcb.com/wp-content/uploads/2018/07/A-Beginners-Guide-to-Components.pdf)
-- [premierguitar.com - Build Your Own Stompbox](https://roar-assets-auto.rbl.ms/documents/9051/Oct14_PGDistortion_BuildGuide_Final_R2.pdf)
+- [Gray Bench Electronics - Full Kit Build Video](https://www.youtube.com/watch?v=_JjrbrLn0x4)
+- [RUDE TECH - Guitar Effect Pedal Kit Build Instructions Video](https://www.youtube.com/watch?v=ZrMTKuxQ1Xw)
+- [pedalparts.co.uk - General Build Guide PDF](https://pedalparts.co.uk/docs/GeneralBuildGuide.pdf)
+- [five-cats-pedals.co.uk - General Build Guide PDF](https://www.five-cats-pedals.co.uk/wp-content/uploads/2022/09/FiveCatsPedals-General-Build-Guide-V1.1-Aug-2022.pdf)
+- [aionfx.com - Troubleshooting Guide PDF](https://aionfx.com/app/files/docs/kit_troubleshooting_guide.pdf)
+- [masfx.io - A Guide to Build Your Own DIY Guitar Pedal PDF](https://masfx.io/quickfuzz.pdf)
+- [guitarpcb.com - A Beginner's Guide to Effects Pedals Components PDF](https://guitarpcb.com/wp-content/uploads/2018/07/A-Beginners-Guide-to-Components.pdf)
+- [premierguitar.com - Build Your Own Stompbox PDF](https://roar-assets-auto.rbl.ms/documents/9051/Oct14_PGDistortion_BuildGuide_Final_R2.pdf)
 
 
 ## Bill of Materials
