@@ -22,10 +22,10 @@ If you want to fabricate the PCB, just upload the `.zip` Gerber files to your fa
 - This pedal should be powered with 12-18VDC. Power draw 100mA. There are claims that 15VDC provides the best results because it generates less heat in the voltage regulator, but 18VDC is the standard.
 - The LM2940 regulator is installed vertically. Its metal tab can be mounted to the chassis to help dissipate heat — just make sure the chassis is grounded and not connected to any other signal paths. This workaround increases build complexity and will be refined in a future revision. The goal was to minimize board temperature to prolong the lifespan of nearby electrolytic capacitors.
 - Only five electrolytic capacitors are used, and they are strategically placed to provide shielding for the TC1044SCPA charge pump switching regulator IC from nearby components.
-- Some capacitors, specifically C3, C4, C5, C9, C12, C17, C18, C20 and C22, that were originally electrolytic, have been replaced with film capacitors. The schematic remains unchanged, but the PCB footprints are different. You can still install electrolytic capacitors in those positions, but be sure to observe the correct polarity.
+- Some capacitors, specifically C3, C4, C5, C9, C12, C17, C18, C20 and C22, that were originally electrolytic, have been replaced with film capacitors. The schematic remains unchanged, but the PCB footprints are different. You can still install electrolytic capacitors in those positions, but be sure to observe the correct polarity. Future revisions will return to electrolytic capacitors because they're cheaper and the experiment didn't produce a better tone.
 - The resistor 2.2K 1/4W for the LED 12V should be placed on the wire that connects it to the PCB. Adjust the resistor value to achieve the desired brightness.
 - Even though the LM2940CT-12/NOPB voltage regulator provides reverse-polarity protection for the entire circuit, it is still good practice to solder a 1N5817 Schottky diode in series with the + wire leading to the DC input. The striped end (cathode) should face the PCB. For example: DC Jack → [Anode — Diode — Cathode] → PCB. You can see this approach used in almost all PedalPCB schematics. Make sure you identify the +V and Ground pins of the DC input by referring to the PCB design in KiCad.
-- For experimental purposes, the mid-pot tone control is wired in the so-called "Marshall style," which gives the mid control a stronger effect and shifts the tone toward a punchier, more mid-rich sound compared to a "Fender style" tone stack. Future revisions may provide both options, allowing the choice to be independent of the PCB layout.
+- For experimental purposes, the mid-pot tone control is wired in the so-called "Marshall style," which gives the mid control a stronger effect and shifts the tone toward a punchier, more mid-rich sound compared to a "Fender style" tone stack. To switch back to the "Fender style" configuration, connect pins 2 and 3 of the MID potentiometer together.
 - Because of space limitations in this version, buffered bypass solder pads are not included. This may be added in a future revision. At the moment, the on/off switch must be wired as a true bypass by the builder. Or, if you're feeling hacky, you can connect a wire between the C3 capacitor and the R4 resistor (for example, to the side of the R4 resistor that isn't connected to Ground), and that will be your buffer. And the signal after R17 should be shorted to Ground during bypass.
 
 
@@ -60,7 +60,7 @@ These guides might help beginners who have never built their own pedals. Some li
 
 ## Bill of Materials
 
-All resistors are 1/4 W metal film with 1% tolerance. All capacitors must have a minimum voltage rating of 35 V. Consider capacitors to be film unless otherwise specified. All ceramic capacitors exhibit some degree of piezoelectric effect, but C0G (also known as NP0) dielectrics have the lowest such effect and are recommended for this design. If 25 kΩ potentiometers are unavailable, a 50 kΩ potentiometer may be used together with a 50 kΩ resistor in parallel. This changes the taper slightly (especially for log pots), because the resistance curve is altered by the parallel resistor. Ferrite bead R1 is optional and can be replaced with a wire link. The OPA2134 at U1 may be substituted with another TL072 without any noticeable difference.
+All resistors are 1/4 W metal film with 1% tolerance. All capacitors must have a minimum voltage rating of 35 V. Consider capacitors to be film unless otherwise specified. If 25 kΩ potentiometers are unavailable, a 50 kΩ potentiometer may be used together with a 50 kΩ resistor in parallel. This changes the taper slightly (especially for log pots), because the resistance curve is altered by the parallel resistor. Ferrite bead R1 is optional and can be replaced with a wire link. The OPA2134 at U1 may be substituted with another TL072 without any noticeable difference.
 
 You'll also need:
 - 6.3 mm jack sockets,
@@ -77,13 +77,13 @@ This pedal provides two output options: Guitar Out and Power Out. In most cases,
 |-------------------|----------------|---|------------------------------------------------|
 |BASS1              |A1M             |1  |                                                |
 |C1,C7,C15,C16      |22n             |4  |                                                |
-|C2,C6,C13          |100p            |3  |Ceramic C0G/NP0                                 |
+|C2,C6,C13          |100p            |3  |Ceramic                                         |
 |C3,C4,C5,C17       |1u              |4  |                                                |
 |C8,C23             |2n2             |2  |                                                |
 |C9,C12,C18         |2u2             |3  |                                                |
-|C10                |47p             |1  |Ceramic C0G/NP0 or Film                         |
+|C10                |47p             |1  |Ceramic                                         |
 |C11                |4n7             |1  |                                                |
-|C14                |560p            |1  |Ceramic C0G/NP0                                 |
+|C14                |560p            |1  |Ceramic                                         |
 |C19                |330n            |1  |                                                |
 |C20,C22            |10u             |2  |                                                |
 |C21                |1n              |1  |                                                |
@@ -168,10 +168,9 @@ And let's not forget that the sound we're looking for doesn't always have to be 
 ## TODO
 
 - Add a connection pad for the buffered output between C3 and R4, and find a suitable location for it on the PCB. Add a connection pad after R17 to be able to short it to Ground during bypass. Update schematic.
+- Make configuration where all caps are the same type as in Diezel VH4 pedal since any difference could affect the tone.
 - Add + signs on a silkscreen layer for all connection pads to lower the risk of mistakes.
 - Position the voltage regulator so that it can be laid flat on the PCB. Add a ground plane underneath it for better heat distribution.
-- Add jumper to select mid-pot wiring between Marshall and Fender styles.
-- Substitute all ceramic caps in favor of polypropylene film ones?
 - Consider adapting the PCB layout to fit more popular enclosures, such as 1590BB.
 - Would it be possible to rewire everything so that pots connected directly to the PCB? Estimate PCB size, production costs and a headache of acquiring the correct pots.
 
