@@ -60,7 +60,7 @@ These guides might help beginners who have never built their own pedals. Some li
 
 ## Bill of Materials
 
-All resistors are 1/4 W metal film with 1% tolerance. All capacitors must have a minimum voltage rating of 35 V. Consider capacitors to be film unless otherwise specified. If 25 kΩ potentiometers are unavailable, a 50 kΩ potentiometer may be used together with a 50 kΩ resistor in parallel. This changes the taper slightly (especially for log pots), because the resistance curve is altered by the parallel resistor. Ferrite bead R1 is optional and can be replaced with a wire link. The OPA2134 at U1 may be substituted with another TL072 without any noticeable difference.
+All resistors are 1/4 W metal film with 1% tolerance. All capacitors must have a minimum voltage rating of 35 V. Consider capacitors to be polypropylene film unless otherwise specified. If 25 kΩ potentiometers are unavailable, a 50 kΩ potentiometer may be used together with a 50 kΩ resistor in parallel. This changes the taper slightly (especially for log pots), because the resistance curve is altered by the parallel resistor. Ferrite bead R1 is optional and can be replaced with a wire link. The OPA2134 at U1 may be substituted with another TL072 without any noticeable difference.
 
 You'll also need:
 - 6.3 mm jack sockets,
@@ -77,16 +77,17 @@ This pedal provides two output options: Guitar Out and Power Out. In most cases,
 |-------------------|----------------|---|------------------------------------------------|
 |BASS1              |A1M             |1  |                                                |
 |C1,C7,C15,C16      |22n             |4  |                                                |
-|C2,C6,C13          |100p            |3  |Ceramic                                         |
+|C2,C6,C13          |100p            |3  |Ceramic Disc                                    |
 |C3,C4,C5,C17       |1u              |4  |                                                |
-|C8,C23             |2n2             |2  |                                                |
+|C8                 |2n2             |1  |                                                |
+|C23                |2n2             |1  |Ceramic Disc or Film                            |
 |C9,C12,C18         |2u2             |3  |                                                |
-|C10                |47p             |1  |Ceramic                                         |
+|C10                |47p             |1  |Ceramic Disc                                    |
 |C11                |4n7             |1  |                                                |
-|C14                |560p            |1  |Ceramic                                         |
+|C14                |560p            |1  |Ceramic Disc                                    |
 |C19                |330n            |1  |                                                |
 |C20,C22            |10u             |2  |                                                |
-|C21                |1n              |1  |                                                |
+|C21                |1n              |1  |Ceramic Disc or Film                            |
 |C24,C25,C26,C27,C28|47u             |5  |Electrolytic ~35V                               |
 |D1,D2,D5,D6        |1N4148          |4  |Signal diode, DO-35                             |
 |D3,D4              |1N4734A         |2  |5.6V zener (equivalents: 1N752, 1N5232), DO-41  |
